@@ -10,14 +10,14 @@ pyautogui.PAUSE = 1
 
 # Step 1: Enter the company's system
 
-pyautogui.hotkey('ctrl', 'alt', '0')
+pyautogui.hotkey('ctrl', 'alt', '0') # Open the browser
 pyperclip.copy('https://drive.google.com/drive/folders/149xknr9JvrlEnhNWO49zPcw0PW5icxga')
 pyautogui.hotkey('ctrl', 'v')
 pyautogui.press('enter')
 
 # Step 2: Navigate to the report location
 
-time.sleep(3)
+time.sleep(3) # Waiting time in seconds
 pyautogui.click(x=519, y=416, clicks=2)
 
 # Step 3: Export the report
@@ -30,3 +30,8 @@ pyautogui.click(x=1286, y=843)
 #Step 4: Calculate the indicators (income and quantity of products)
 
 time.sleep(3)
+tabela = pandas.read_excel(r'C:\Users\andre\Downloads\Vendas - Dez.xlsx')
+
+faturamento = tabela['Valor Final'].sum()
+quantidade = tabela['Quantidade'].sum()
+
