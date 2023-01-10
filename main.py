@@ -35,3 +35,31 @@ tabela = pandas.read_excel(r'C:\Users\andre\Downloads\Vendas - Dez.xlsx')
 faturamento = tabela['Valor Final'].sum()
 quantidade = tabela['Quantidade'].sum()
 
+# Step 5: Send an e-mail to board of directors
+
+time.sleep(3)
+pyautogui.hotkey('ctrl', 't')
+pyperclip.copy('https://mail.google.com/mail/u/0/?ogbl#inbox') # Enter my email
+pyautogui.hotkey('ctrl', 'v')
+pyautogui.press('enter')
+time.sleep(3)
+pyautogui.click(x=123, y=255) # Click to write email
+pyautogui.write('andreluis0703@gmail.com')
+pyautogui.press('enter')
+pyautogui.press('tab')
+pyperclip.copy('Relatório de Vendas')
+pyautogui.hotkey('ctrl', 'v')
+pyautogui.press('tab')
+
+texto = """
+Dears, good morning!
+
+Yesterday's billing was: R${faturamento:,.2f}
+The number of products was: R${quntidade:,}
+
+SY, André Ramos
+"""
+
+pyperclip.copy(texto)
+pyautogui.hotkey('ctrl', 'v')
+pyautogui.hotkey('ctrl', 'enter')
