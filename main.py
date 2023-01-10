@@ -21,3 +21,12 @@ time.sleep(3)
 pyautogui.click(x=519, y=416, clicks=2)
 
 # Step 3: Export the report
+
+time.sleep(3)
+pyautogui.click(x=609, y=500)
+pyautogui.click(x=1609, y=236)
+pyautogui.click(x=1286, y=843)
+
+#Step 4: Calculate the indicators (income and quantity of products)
+
+time.sleep(3)
