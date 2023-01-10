@@ -1,2 +1,2 @@
 # Intensivao_python
- Um projeto de automação feito em python.
+ An automation project made in python.
