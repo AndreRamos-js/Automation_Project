@@ -18,7 +18,7 @@ pyautogui.press('enter')
 # Step 2: Navigate to the report location
 
 time.sleep(3) # Waiting time in seconds
-pyautogui.click(x=1567, y=476)
+pyautogui.click(x=539, y=480)
 
 # Step 3: Export the report
 
